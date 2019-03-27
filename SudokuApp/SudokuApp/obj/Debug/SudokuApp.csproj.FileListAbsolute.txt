@@ -8,3 +8,13 @@ C:\Users\100655384\source\repos\SudokuApp\SudokuApp\obj\Debug\SudokuApp.csproj.G
 C:\Users\100655384\source\repos\SudokuApp\SudokuApp\obj\Debug\SudokuApp.csproj.CoreCompileInputs.cache
 C:\Users\100655384\source\repos\SudokuApp\SudokuApp\obj\Debug\SudokuApp.exe
 C:\Users\100655384\source\repos\SudokuApp\SudokuApp\obj\Debug\SudokuApp.pdb
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\bin\Debug\SudokuApp.exe.config
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\bin\Debug\SudokuApp.exe
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\bin\Debug\SudokuApp.pdb
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.csprojAssemblyReference.cache
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.Properties.Resources.resources
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.csproj.GenerateResource.cache
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.csproj.CoreCompileInputs.cache
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.exe
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.pdb
+C:\Users\Avdon\Documents\GitHub\Sudoku-Game\SudokuApp\SudokuApp\obj\Debug\SudokuApp.frm_Main.resources

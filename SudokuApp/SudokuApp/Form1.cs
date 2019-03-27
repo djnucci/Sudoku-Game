@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SudokuApp
 {
-    public partial class Form1 : Form
+    public partial class frm_Main : Form
     {
         private TextBox[,] gameArray;
 
-        public Form1()
+        public frm_Main()
         {
             InitializeComponent();
             gameArray = new TextBox[,] {
@@ -38,5 +38,22 @@ namespace SudokuApp
 
         }
 
+        private void Frm_Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public Boolean checkCells(TextBox[,] gameArray)
+        {
+            TextBox[] cellCheckArray = new TextBox[9];
+            for (int i = 0; i < cellCheckArray.Length; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    cellCheckArray[j] = gameArray[i,j];
+                }
+            }
+            bool isOK = cellCheckArray.Distinct().Count() == cellCheckArray.Length;
+        }
     }
 }
