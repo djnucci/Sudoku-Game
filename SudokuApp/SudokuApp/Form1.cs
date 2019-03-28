@@ -43,17 +43,59 @@ namespace SudokuApp
 
         }
 
-        public Boolean checkCells(TextBox[,] gameArray)
-        {
+        public bool CheckPuzzle(TextBox[][] gameArray) {
+            return (CheckRows(gameArray) && CheckColumns(gameArray) && CheckQuadrants(gameArray));
+        }
+
+        public bool CheckRows(TextBox[][] gameArray) {
             TextBox[] cellCheckArray = new TextBox[9];
+
+            for (int i = 0; i < cellCheckArray.Length; i++) {
+                for (int j = 0; j < 9; j++) {
+                    cellCheckArray[j] = gameArray[i][j];
+                }
+                if (cellCheckArray.Distinct().Count() != cellCheckArray.Length) {
+                    return false; 
+                }
+            }
+            return true;
+        }
+
+        public bool CheckColumns(TextBox[][] gameArray) {
+            TextBox[] cellCheckArray = new TextBox[9];
+
             for (int i = 0; i < cellCheckArray.Length; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    cellCheckArray[j] = gameArray[i,j];
+                    cellCheckArray[j] = gameArray[j][i];
+                }
+                if (cellCheckArray.Distinct().Count() != cellCheckArray.Length)
+                {
+                    return false;
                 }
             }
-            bool isOK = cellCheckArray.Distinct().Count() == cellCheckArray.Length;
+            return true;
+        }
+
+        public bool CheckQuadrants(TextBox[][] gameArray)
+        {
+            TextBox[] cellCheckArray = new TextBox[9];
+
+
+
+            /*for (int i = 0; i < cellCheckArray.Length ; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    cellCheckArray[i][j] = gameArray[i][j];
+                }
+                if (cellCheckArray.Distinct().Count() != cellCheckArray.Length)
+                {
+                    return false;
+                } 
+            }*/
+            return true;
         }
     }
 }
