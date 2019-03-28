@@ -81,14 +81,19 @@ namespace SudokuApp
 
         public bool CheckQuadrants(TextBox[][] gameArray)
         {
-            TextBox[,] cellCheckArray = new TextBox[3,3];
+            TextBox[,] cellCheckArray = new TextBox[3, 3];
 
-            for (int k = 0; k < 9;k++) {
-
-            }
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < cellCheckArray.Length; j++) { 
-
+            for (int l = 0; l < 3; l++) 
+            { 
+                for (int k = 0; k < 3; k++)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            cellCheckArray[i][j] = cellCheckArray[i + (3 * l)][j + (3 * k)];
+                        }
+                    }
                 }
             }
 
