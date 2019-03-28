@@ -1187,6 +1187,7 @@
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start Game";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // btnSolve
             // 
@@ -1196,6 +1197,7 @@
             this.btnSolve.TabIndex = 2;
             this.btnSolve.Text = "Solve";
             this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.BtnSolve_Click);
             // 
             // mainTimer
             // 

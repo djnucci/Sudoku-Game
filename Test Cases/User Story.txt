@@ -1,0 +1,7 @@
+[2] “ As a competitive gamer, I want games that will keep track of my score so that I can see how I stack up to the best.”
+
+Requirements:
+
+- Make a chart in game that will keep your best score in each game mode 
+- Score can be calculated based on time, incorrect numbers, needing hints, etc...
+

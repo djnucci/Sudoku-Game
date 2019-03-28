@@ -13,7 +13,7 @@ namespace SudokuApp
 {
     public partial class frm_Main : Form
     {
-        private TextBox[,] gameArray;
+        protected TextBox[,] gameArray;
 
         public frm_Main()
         {
@@ -44,16 +44,16 @@ namespace SudokuApp
 
         }
 
-        public bool CheckPuzzle(TextBox[][] gameArray) {
+        public bool CheckPuzzle(TextBox[,] gameArray) {
             return (CheckRows(gameArray) && CheckColumns(gameArray) && CheckQuadrants(gameArray));
         }
 
-        public bool CheckRows(TextBox[][] gameArray) {
+        public bool CheckRows(TextBox[,] gameArray) {
             TextBox[] cellCheckArray = new TextBox[9];
 
             for (int i = 0; i < cellCheckArray.Length; i++) {
                 for (int j = 0; j < 9; j++) {
-                    cellCheckArray[j] = gameArray[i][j];
+                    cellCheckArray[j] = gameArray[i, j];
                 }
                 if (cellCheckArray.Distinct().Count() != cellCheckArray.Length) {
                     return false; 
@@ -62,14 +62,14 @@ namespace SudokuApp
             return true;
         }
 
-        public bool CheckColumns(TextBox[][] gameArray) {
+        public bool CheckColumns(TextBox[,] gameArray) {
             TextBox[] cellCheckArray = new TextBox[9];
 
             for (int i = 0; i < cellCheckArray.Length; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    cellCheckArray[j] = gameArray[j][i];
+                    cellCheckArray[j] = gameArray[j, i];
                 }
                 if (cellCheckArray.Distinct().Count() != cellCheckArray.Length)
                 {
@@ -79,41 +79,44 @@ namespace SudokuApp
             return true;
         }
 
-        public bool CheckQuadrants(TextBox[][] gameArray)
+        public bool CheckQuadrants(TextBox[,] gameArray)
         {
-            TextBox[,] cellCheckArray = new TextBox[3, 3];
+            TextBox[] cellCheckArray = new TextBox[9];
 
-            for (int l = 0; l < 3; l++) 
-            { 
-                for (int k = 0; k < 3; k++)
-                {
-                    for (int i = 0; i < 3; i++)
-                    {
-                        for (int j = 0; j < 3; j++)
-                        {
-                            cellCheckArray[i][j] = cellCheckArray[i + (3 * l)][j + (3 * k)];
-                        }
-                    }
-                }
-            }
-
-            /*for (int i = 0; i < cellCheckArray.Length ; i++)
+            for (int i = 0; i < cellCheckArray.Length ; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    cellCheckArray[i][j] = gameArray[i][j];
+                    cellCheckArray[i] = gameArray[i, j];
                 }
                 if (cellCheckArray.Distinct().Count() != cellCheckArray.Length)
                 {
                     return false;
                 } 
-            }*/
+            }
             return true;
         }
 
         private void MainTimer_Tick(object sender, EventArgs e)
         {
             lblTimer.Text = DateTime.Now.ToString("h:mm:ss tt");
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnSolve_Click(object sender, EventArgs e)
+        {
+            if (CheckPuzzle(gameArray))
+            {
+                MessageBox.Show("You have solved the puzzle.");
+            }
+            else
+            {
+                MessageBox.Show("You have not solved the puzzle.");
+            }
         }
     }
 }
