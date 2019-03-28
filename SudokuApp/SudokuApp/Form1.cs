@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace SudokuApp
 {
@@ -80,9 +81,16 @@ namespace SudokuApp
 
         public bool CheckQuadrants(TextBox[][] gameArray)
         {
-            TextBox[] cellCheckArray = new TextBox[9];
+            TextBox[,] cellCheckArray = new TextBox[3,3];
 
+            for (int k = 0; k < 9;k++) {
 
+            }
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < cellCheckArray.Length; j++) { 
+
+                }
+            }
 
             /*for (int i = 0; i < cellCheckArray.Length ; i++)
             {
@@ -96,6 +104,11 @@ namespace SudokuApp
                 } 
             }*/
             return true;
+        }
+
+        private void MainTimer_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToString("h:mm:ss tt");
         }
     }
 }

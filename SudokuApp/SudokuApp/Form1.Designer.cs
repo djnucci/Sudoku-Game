@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cell80 = new System.Windows.Forms.TextBox();
             this.cell70 = new System.Windows.Forms.TextBox();
@@ -110,6 +111,10 @@
             this.cell02 = new System.Windows.Forms.TextBox();
             this.cell01 = new System.Windows.Forms.TextBox();
             this.cell00 = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnSolve = new System.Windows.Forms.Button();
+            this.mainTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1174,11 +1179,46 @@
             this.cell00.TabIndex = 0;
             this.cell00.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(795, 290);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(145, 50);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "Start Game";
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnSolve
+            // 
+            this.btnSolve.Location = new System.Drawing.Point(795, 375);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(145, 50);
+            this.btnSolve.TabIndex = 2;
+            this.btnSolve.Text = "Solve";
+            this.btnSolve.UseVisualStyleBackColor = true;
+            // 
+            // mainTimer
+            // 
+            this.mainTimer.Enabled = true;
+            this.mainTimer.Tick += new System.EventHandler(this.MainTimer_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(805, 213);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(59, 25);
+            this.lblTimer.TabIndex = 3;
+            this.lblTimer.Text = "Time";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 738);
+            this.ClientSize = new System.Drawing.Size(1017, 738);
+            this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.btnSolve);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -1189,6 +1229,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1276,6 +1317,10 @@
         private System.Windows.Forms.TextBox cell03;
         private System.Windows.Forms.TextBox cell02;
         private System.Windows.Forms.TextBox cell01;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnSolve;
+        private System.Windows.Forms.Timer mainTimer;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
 
